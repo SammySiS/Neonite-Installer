@@ -8,8 +8,19 @@ try:
     import subprocess
     import zipfile
     from tqdm import tqdm as tqdm
-except ImportError:
-    print("[>] The installer couldn't find a package (requests or asyncio or tqdm)!")
+except ImportError:  
+    print("[>] The installer couldn't find a package (requests or asyncio or tqdm)! \n[>] The installer will try to install them, wait a minute!")
+    os.system('py -m pip install requests')
+    os.system('python -m pip install requests')
+    os.system('pip install requests')
+    
+    os.system('py -m pip install tqdm')
+    os.system('python -m pip install tqdm')
+    os.system('pip install tqdm')
+    
+    os.system('py -m pip install asyncio')
+    os.system('python -m pip install asyncio')
+    os.system('pip install asyncio')
 
 
 def IsSupported(platform):
