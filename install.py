@@ -70,12 +70,7 @@ def DownloadAndInstall(what):
                 progress.update(datasize)
         print("[>] Instructions: Press Next, accept the terms and conditions and press all next then Install.")
         subprocess.call('node.msi', shell=True)
-
-
-def ProceedWithUnzip(zipname):
-
-    print('[>] Unzip placeholder!')
-
+        
 def IsInstalled(programName):
     doesExist = input("[>] (Y or N) The installer will now be looking for a Node installation. Do you have a custom installation PATH of Node? ")
     if doesExist == "N":
